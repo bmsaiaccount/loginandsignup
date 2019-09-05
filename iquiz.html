@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>QUIZ</title>
+
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"><!-- Latest compiled and minified CSS -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script><!-- jQuery library -->
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script><!-- Latest compiled JavaScript -->
+
+<style>
+body {
+	font-family: 'Lato', sans-serif;
+	background: #f6f6f6;
+		}
+
+
+#quiz {
+	margin-left: 100px;
+	
+	background: #C7D0CF;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+	box-shadow: 0 0 5px 3px #ccc;
+	font-size: 22px;
+
+}
+
+input {
+	margin-bottom: 20px;
+	display: block;
+}
+
+#textbox {
+	height: 25px;
+	font-size: 16px;
+	border-radius: 5px;
+	border: none;
+	padding-left: 5px;
+}
+
+
+#button {
+	background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+}
+#next{
+background: green;
+	border: none;
+	border-radius: 5px;
+	padding: 10px;
+	color: white;
+	font-size: 16px;
+	transition-duration: .5s;
+	margin-top: 15px;
+	margin-left: 145px;
+}
+
+#next:hover {
+	background: white;
+	color: black;
+	cursor: pointer;
+	border: 1px solid green;
+	
+}
+a:hover {
+	color:black;
+	text-decoration:none;
+	
+
+}
+a{
+	color:white;
+	text-decoration:none;
+}
+#button:hover {
+	background: white;
+	border: 1px solid green;
+	color: black;
+	cursor: pointer;
+
+}
+
+#after_submit {
+	visibility: hidden;
+	background: #EEF5F4;
+	padding: 10px 20px 10px 20px;
+	width: 400px;
+	border-radius: 20px;
+	float: left;
+	margin-left: 80px;
+	
+	font-size: 30px;
+	box-shadow: 0 0 5px 3px #ccc;
+
+}
+
+#picture {
+	width: 375px;
+	height: 245px;
+}
+
+
+
+#mc {
+	display: inline;
+} 
+.countdownContainer{
+			position: absolute;;
+			top: 90%;
+			left: 90%;
+			transform : translateX(-50%) translateY(-50%);
+			text-align: center;
+			background: #F9FCFC;
+			border: 1px solid #999;
+			padding: 10px;
+			box-shadow: 0 0 5px 3px #ccc;
+		}
+ 
+		.info {
+			font-size: 15px;
+		}
+		body{
+	background-color:#708399;
+	background:url('quizpic.jpg');
+	background-size:cover;
+		}
+		h1{
+			color:#71F0F0;
+			margin-left:600px;
+			margin-top:70px;
+			
+		}
+		.navbar{
+				background-color:#53F8DB;
+				border-bottom:;
+		}
+		.navbar,.navbar-brand{
+				color:red;
+		}
+		.navbar-inverse .navbar-brand{
+				color:#34495E;
+		}
+		.navbar-inverse .navbar-nav li a {
+			color:#34495E;
+		}
+		.navbar-inverse .navbar-nav li a:hover{
+			color: white;
+		}
+		
+</style>
+
+</head>
+
+
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+				<div class="container">
+					<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynav">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+						<a href="project.html" class="navbar-brand"><i class="glyphicon glyphicon-certificate"></i>  BMS</a>
+					</div>
+					<div id="mynav" class="collapse navbar-collapse" > 
+					<ul class="nav navbar-nav">
+						
+						<li><a href="iquiz.html"><i class="glyphicon glyphicon-home"></i> QUIZ</a></li>
+						
+						<li><a href="iprofile.html" target="_blank" ><i class="glyphicon glyphicon-folder-open"></i>   ABOUT ME</a></li>
+						<li><a href="icontact.html" target="_blank"><i class="glyphicon glyphicon-flag"></i>  CONTACT ME</a></li>
+						<li><a href="ilogin.html" target="_blank"><i class="glyphicon glyphicon-log-in"></i> SIGN UP&LOGIN</a></li>
+						
+						</ul>
+						</div>
+				</div>
+			</nav>
+<h1>QUIZ</h1>
+
+
+<form id = "quiz" name = "quiz">
+
+
+<p class = "questions">What is the capital of India?</p>
+<input id = "textbox" type = "text" name = "question1" placeholder = "Hint:new delhi">
+
+<p class = "questions">What is the capital of Andhra pradesh?</p>
+<input type = "radio" id = "mc" name = "question2" value = "Amaravathi">Amaravathi<br>
+<input type = "radio" id = "mc" name = "question2" value = "Hyderabad">Hyderabad<br>
+
+<p class = "questions">Who is the X CM of andhra pradesh?</p>
+
+<input type = "radio" id = "mc" name = "question3" value = "Y S Jagan"> Y S Jagan<br>
+<input type = "radio" id = "mc" name = "question3" value = "Chandra Babu Naidu"> Chandra Babu Naidu<br>
+
+
+<input id = "button" type = "button" value = "I'm finished!" onclick = "check();" onclick="">
+
+
+
+
+</form>
+
+<div id = "after_submit">
+<p id = "number_correct"></p>
+<p id = "message"></p>
+
+<button id="next"><a href="ilogin.html" target="_blank">Accessed</a></button>
+</div>
+<table class="countdownContainer">
+			<tr class="info">
+				<td colspan="4">NOTICE PERIOD COUNT0DOWN</td>
+			</tr>
+			<tr class="info">
+				<td id="days">120</td>
+				<td id="hours">4</td>
+				<td id="minutes">12</td>
+				<td id="seconds">22</td>
+			</tr>
+			<tr>
+				<td>D</td>
+				<td>H</td>
+				<td>M</td>
+				<td>S</td>
+	 		</tr>
+		</table>
+<script>
+function check(){
+
+	var question1 = document.quiz.question1.value;
+	var question2 = document.quiz.question2.value;
+	var question3 = document.quiz.question3.value;
+	var correct = 0;
+
+
+	if (question1 == "new delhi") {
+		correct++;
+}
+	if (question2 == "Amaravathi") {
+		correct++;
+}	
+	if (question3 == "Chandra Babu Naidu") {
+		correct++;
+		
+	}
+	
+	
+	var messages = ["Great job! Click to login", "That's just okay! Click to login", "You really need to do better!! Anyway Click to login" ];
+	var score;
+
+	if (correct == 0) {
+		score = 2;
+	}
+
+	if (correct > 0 && correct < 3) {
+		score = 1;
+	}
+
+	if (correct == 3) {
+		score = 0;
+		
+	}
+	
+	if(correct == 3){
+	
+		
+	
+	}
+	document.getElementById("after_submit").style.visibility = "visible";
+
+	document.getElementById("message").innerHTML = messages[score];
+	document.getElementById("number_correct").innerHTML = "You got " + correct + " correct.";
+	
+	}
+	
+	function countdown(){
+				var now = new Date();
+				var eventDate = new Date(2019, 8, 1);
+ 
+				var currentTiime = now.getTime();
+				var eventTime = eventDate.getTime();
+ 
+				var remTime = eventTime - currentTiime;
+ 
+				var s = Math.floor(remTime / 1000);
+				var m = Math.floor(s / 60);
+				var h = Math.floor(m / 60);
+				var d = Math.floor(h / 24);
+ 
+				h %= 24;
+				m %= 60;
+				s %= 60;
+ 
+				h = (h < 10) ? "0" + h : h;
+				m = (m < 10) ? "0" + m : m;
+				s = (s < 10) ? "0" + s : s;
+ 
+				document.getElementById("days").textContent = d;
+				document.getElementById("days").innerText = d;
+ 
+				document.getElementById("hours").textContent = h;
+				document.getElementById("minutes").textContent = m;
+				document.getElementById("seconds").textContent = s;
+ 
+				setTimeout(countdown, 1000);
+			}
+ 
+			countdown();
+
+</script>
+</body>
+</html>
